@@ -1,10 +1,70 @@
-name: "Workflow"
-on: [ "push" ]
+name: Deploy Portofolio WEB APP
+on:
+  push:
+    branches:
+      - main
 jobs:
-  build:
-    runs-on: "ubuntu-latest"
+  build-deploy:
+    runs-on: ubuntu-latest
     steps:
-      # - uses: "actions/checkout@main"
-      - name: "TODO to Issue"
-        uses: "alstr/todo-to-issue-action@v4.5"
-        id: "todo"
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 21
+
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        with:
+          version: 8
+          run_install: false
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile
+
+      - name: Run Production
+        run: |
+          cp .env.example .env
+          pnpm run build
+
+      - name: Deploy to server
+        uses: garygrossgarten/github-action-scp@release
+        with:
+          local: .output/
+          remote: /var/www/portofolio/.output/
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          privateKey: ${{ secrets.SSH_PRIVATE_KEY }}
+          recursive: true
+          verbose: true
+          dotfiles: true
+
+      - name: Prepare NuxtJS 3 Web App
+        run: |
+          echo ":: =========================== ::"
+          echo "Run NuxtJS 3 Web App"
+          echo "HENDI SANTIKA Portofolio"
+          echo ":: =========================== ::"
+      - name: Restart webapp via pm2
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          script: sh /var/www/portofolio/pm2.sh
