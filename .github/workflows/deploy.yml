@@ -114,14 +114,14 @@ jobs:
           ACTIVE_RELEASE_PATH: /var/www/portofolio/live
         with:
           host: ${{ env.IP_ADDRESS }}
-          username: ${{ secrets.SSH_USERNAME }}
+          username: "root"
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
           envs: RELEASE_PATH,ACTIVE_RELEASE_PATH
           script: |
-            sudo ln -s -n -f $RELEASE_PATH $ACTIVE_RELEASE_PATH
-            sudo systemctl restart hendisantika.my.id
-            sudo chown -R www-data:www-data ${RELEASE_PATH}
+            ln -s -n -f $RELEASE_PATH $ACTIVE_RELEASE_PATH
+            systemctl restart hendisantika.my.id
+            chown -R www-data:www-data ${RELEASE_PATH}
 
   clean-up:
     name: "Clean up old versions"
