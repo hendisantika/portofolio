@@ -58,13 +58,14 @@ jobs:
           echo "Run NuxtJS 3 Web App"
           echo "HENDI SANTIKA Portofolio"
           echo ":: =========================== ::"
-          npm install pm2
-          pm2 restart "PORTOFOLIO WEB APP"
-#      - name: Restart webapp via pm2
-#        uses: appleboy/ssh-action@master
-#        with:
-#          host: ${{ secrets.SSH_HOST }}
-#          username: ${{ secrets.SSH_USERNAME }}
-#          key: ${{ secrets.SSH_PRIVATE_KEY }}
-#          port: ${{ secrets.SSH_PORT }}
-#          script: sh /var/www/portofolio/pm2.sh
+      #          npm install pm2
+      #          pm2 restart "PORTOFOLIO WEB APP"
+
+      - name: Restart webapp via pm2
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          script: sh /var/www/portofolio/pm2.sh
