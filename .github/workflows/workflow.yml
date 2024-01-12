@@ -15,6 +15,10 @@ jobs:
         with:
           node-version: 21
 
+      - name: Pull environment form variable
+        run: |
+          echo "$ENV_GITHUB" > .env_github
+
       #      - uses: npm/action-setup@v4
       #        name: Install npm
       #        with:
@@ -60,6 +64,8 @@ jobs:
 
       - name: Upload app-artifacts to remote folder
         uses: appleboy/scp-action@master
+        run: |
+          echo "$ENV_GITHUB" > .env_github
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
@@ -67,7 +73,8 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           #          source: ${{ github.sha }}.tar.gz
           source: "app-artifacts.zip"
-          target: "/var/www/portofolio/public/"
+          #          target: "/var/www/portofolio/public/"
+          target: ${{ $PATH_DEPLOY }}
           strip_components: 1
 
       - name: Extract archive and create directories
