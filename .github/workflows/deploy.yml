@@ -114,7 +114,7 @@ jobs:
           ACTIVE_RELEASE_PATH: /var/www/portofolio/live
         with:
           host: ${{ env.IP_ADDRESS }}
-          username: "root"
+          username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
           envs: RELEASE_PATH,ACTIVE_RELEASE_PATH
