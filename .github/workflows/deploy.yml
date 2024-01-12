@@ -64,7 +64,9 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: app-artifacts
-          path: ${{ github.sha }}.tar.gz
+          #          path: ${{ github.sha }}.tar.gz
+          path: .output
+
       - run: tar.gz -zxvf ${{ github.sha }}.tar.gz .
 
       - uses: ncipollo/release-action@v1
