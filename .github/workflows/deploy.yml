@@ -7,7 +7,7 @@ on:
       - 'feature/deploy'
 
 env:
-  NODE_VERSION: 21
+  NODE_VERSION: 21.5.0
   IP_ADDRESS: "103.251.44.145"
 
 jobs:
@@ -45,9 +45,6 @@ jobs:
           npm install
           npm run build
           cp .env .output/server/.env
-      #          cp .env server/database/
-      #          tar -czf "${GITHUB_SHA}".tar.gz .output
-      #          tar -czf "${GITHUB_SHA}"-database.tar.gz -C ./server database
 
       - name: Store app-artifacts for distribution
         uses: actions/upload-artifact@v4
