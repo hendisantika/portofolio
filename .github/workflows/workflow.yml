@@ -61,10 +61,10 @@ jobs:
       - name: Upload app-artifacts to remote folder
         uses: appleboy/scp-action@master
         with:
-          #          host: ${{ secrets.SSH_HOST }}
-          #          username: ${{ secrets.SSH_USERNAME }}
-          #          port: ${{ secrets.SSH_PORT }}
-          #          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          port: ${{ secrets.SSH_PORT }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
           #          source: ${{ github.sha }}.tar.gz
           source: "app-artifacts.zip"
           target: /var/www/portofolio/public
