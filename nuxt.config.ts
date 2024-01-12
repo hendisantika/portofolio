@@ -7,7 +7,7 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: "en"
       },
-      title: "Web developer portfolio | Front End Developer",
+      title: "Senior Backend Developer | Web developer portfolio | Front End Developer",
       meta: [
         {
           name: "viewport",
@@ -16,10 +16,10 @@ export default defineNuxtConfig({
         {
           name: "description",
           content:
-            "Personal Portfolio Website. I'm a Front-End Web Developer based in Kuala Lumpur, Malaysia. Currently focused on developing website using Vue and React. Checkout my projects and github repositories"
+            "Personal Portfolio Website. I'm a Back-End Developer, Front-End Web Developer based in Bandung - West Java, Indonesia. Currently focused on developing website using Vue and Spring Boot. Checkout my projects and github repositories"
         },
         { name: "format-detection", content: "telephone=no" },
-        { property: "author", content: "Po Yi Zhi" },
+        { property: "author", content: "HENDI SANTIKA" },
         {
           name: "keywords",
           content:
@@ -32,7 +32,7 @@ export default defineNuxtConfig({
         },
         {
           property: "og:site",
-          content: "https://www.eazypau.com/"
+          content: "https://s.id/hendisantika"
         },
         {
           property: "og:title",
@@ -41,7 +41,7 @@ export default defineNuxtConfig({
         {
           property: "og:description",
           content:
-            "Personal Portfolio Website. I'm a Front-End Web Developer based in Kuala Lumpur, Malaysia. Currently focused on developing website using Vue and React. Checkout my projects and github repositories"
+            "Personal Portfolio Website. I'm a Back-End Developer, Front-End Web Developer based in Bandung - West Java, Indonesia. Currently focused on developing website using Vue and Spring Boot. Checkout my projects and github repositories"
         },
         // sharing thumbmail img
         {

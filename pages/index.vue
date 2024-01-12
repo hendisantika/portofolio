@@ -22,7 +22,7 @@ const jsonLd = {
 const personJson = {
   "@context": "https://schema.org/",
   "@type": "Person",
-  "@id": "#poyizhi",
+  "@id": "#hendisantika",
   name: "HENDI SANTIKA",
   email: "hendisantika@yahoo.co.id",
   url: "https://s.id/hendisantika"

@@ -33,7 +33,7 @@ export function useConstants() {
     {
       id: 6,
       name: "Blog",
-      href: "https://my-blog-eazypau.vercel.app/"
+      href: "https://s.id/hendisantika"
     }
   ];
 
@@ -150,7 +150,7 @@ export function useConstants() {
     },
     {
       title: "Learning new technologies/framework",
-      text: "To explore and expand my skillsets. \n Recently exploring Kotlin and ThreeJs",
+      text: "To explore and expand my skill sets. \n Recently exploring Kotlin and ThreeJs",
       classBg: "bg-programming"
     },
     // {
@@ -177,10 +177,10 @@ export function useConstants() {
       filterColor: "bg-slate-900 bg-opacity-60",
       imageUrl: "/project-ss/blog-page.png",
       description: "A personal blog using NextJS and Notion API",
-      techStack: ["NextJS", "TS", "TailwindCSS", "@notionhq/client"],
+      techStack: ["Java", "Spring Boot", "NuxtJS", "TS", "TailwindCSS", "@notionhq/client"],
       isUrl: true,
-      urlLink: "https://my-blog-eazypau.vercel.app/",
-      githubLink: "https://github.com/eazypau/my-blog"
+      urlLink: "https://s.id/hendisantika",
+      githubLink: "https://github.com/hendisantika"
     },
     {
       isReverse: true,

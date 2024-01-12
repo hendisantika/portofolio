@@ -86,19 +86,19 @@
             </p> -->
             <p>
               Hi there! I'm a self-taught developer with a background in
-              mechanical engineering (graduated from Multimedia University).
-              After discovering my passion for web development, I made a career
-              change and became a frontend web developer. Currently working as a
-              Junior Developer in
+              Islamic Boarding School.
+              After discovering my passion for backend & web development. I made a career
+              change and became a backend & frontend web developer. Currently working as a
+              Software Developer in
               <a
                 class="font-bold text-red-600 dark:text-red-300 hover:underline"
-                href="https://jagasolution.com/jagaapp/"
-              >JagaApp</a
+                href="https://s.id/pppemudapersis"
+              >Pemuda PERSIS</a
               >.
             </p>
 
             <p>
-              I'm passionate in learning new technologies, building responsive
+              I'm passionate in learning new technologies, create project on github & gitlab, building responsive
               websites, and documenting my working process when it comes to
               complicated features.
             </p>
@@ -108,6 +108,8 @@
 
           <div class="summary-skill-list-container">
             <ul>
+              <li>Java</li>
+              <li>Spring Boot</li>
               <li>JavaScript</li>
               <li>Vue</li>
               <li>TailwindCSS</li>
@@ -122,7 +124,7 @@
           <div class="profile-social-icons">
             <a
               aria-label="Instagram"
-              href="https://www.instagram.com/yzpo/"
+              href="https://www.instagram.com/hendisantika/"
               target="blank"
             >
               <IconsInstaIcon />
@@ -130,7 +132,7 @@
 
             <a
               aria-label="Facebook"
-              href="https://www.facebook.com/yizhipo"
+              href="https://www.facebook.com/hendisantika"
               target="blank"
             >
               <IconsFacebookIcon />
@@ -138,7 +140,7 @@
 
             <a
               aria-label="Linkden"
-              href="https://www.linkedin.com/in/yzpo/"
+              href="https://www.linkedin.com/in/hendisantika/"
               target="blank"
             >
               <IconsLinkedInIcon />
@@ -146,7 +148,7 @@
 
             <a
               aria-label="Github"
-              href="https://github.com/eazypau"
+              href="https://github.com/hendisantika"
               target="blank"
             >
               <IconsGithubIcon />

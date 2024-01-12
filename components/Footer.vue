@@ -20,7 +20,7 @@
           <a
             aria-label="Instagram"
             class="footerIcon"
-            href="https://www.instagram.com/yzpo/"
+            href="https://www.instagram.com/hendisantika/"
             target="_blank"
           >
             <IconsInstaIcon />
@@ -29,7 +29,7 @@
           <a
             aria-label="Facebook"
             class="footerIcon"
-            href="https://www.facebook.com/yizhipo"
+            href="https://www.facebook.com/hendisantika"
             target="_blank"
           >
             <IconsFacebookIcon />
@@ -38,7 +38,7 @@
           <a
             aria-label="Linkden"
             class="footerIcon"
-            href="https://www.linkedin.com/in/yzpo/"
+            href="https://www.linkedin.com/in/hendisantika/"
             target="_blank"
           >
             <IconsLinkedInIcon />
@@ -47,7 +47,7 @@
           <a
             aria-label="Github"
             class="footerIcon"
-            href="https://github.com/eazypau"
+            href="https://github.com/hendisantika"
             target="_blank"
           >
             <IconsGithubIcon />
@@ -57,7 +57,7 @@
       </div>
 
       <div class="copyright">
-        © {{ CURRENT_YEAR }} - Present Po YZ. All rights reserved.
+        © {{ CURRENT_YEAR }} - Present Hendi Santika. All rights reserved.
       </div>
     </footer>
   </div>
