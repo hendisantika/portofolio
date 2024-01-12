@@ -115,7 +115,7 @@ jobs:
         with:
           host: ${{ env.IP_ADDRESS }}
           username: "root"
-          key: ${{ secrets.SSH_KEY }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: "22"
           envs: RELEASE_PATH,ACTIVE_RELEASE_PATH
           script: |
