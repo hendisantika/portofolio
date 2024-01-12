@@ -119,6 +119,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
           #          script: sh /var/www/portofolio/pm2.sh
+          #          script: "/home/deployer/.local/share/pnpm/pm2 restart \"PORTOFOLIO WEB APP\""
           script: |
-            #            npm install -g pm2
-                    /home/deployer/.local/share/pnpm/pm2 restart "PORTOFOLIO WEB APP"
+            export PATH=$PATH:/home/deployer/.local/share/pnpm/pm2
+            pm2 pm2 restart "PORTOFOLIO WEB APP"
