@@ -118,4 +118,6 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
-          script: sh /var/www/portofolio/pm2.sh
+          script: |
+            cd /var/www/portofolio
+            sh ./pm2.sh
