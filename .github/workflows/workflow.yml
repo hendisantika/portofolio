@@ -90,17 +90,17 @@ jobs:
       #          script: unzip -r app-artifacts.zip .
 
 
-      #      - name: Deploy to server
-      #        uses: garygrossgarten/github-action-scp@release
-      #        with:
-      #          local: .output/
-      #          remote: /var/www/portofolio/.output/
-      #          host: ${{ secrets.SSH_HOST }}
-      #          username: ${{ secrets.SSH_USERNAME }}
-      #          privateKey: ${{ secrets.SSH_PRIVATE_KEY }}
-      #          recursive: true
-      #          verbose: true
-      #          dotfiles: true
+      - name: Deploy to server
+        uses: garygrossgarten/github-action-scp@release
+        with:
+          local: .output/
+          remote: /var/www/portofolio/.output/
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          privateKey: ${{ secrets.SSH_PRIVATE_KEY }}
+          recursive: true
+          verbose: true
+          dotfiles: true
 
       - name: Prepare NuxtJS 3 Web App
         run: |
