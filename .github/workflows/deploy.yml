@@ -65,7 +65,8 @@ jobs:
           path: .output
 
       #      - run: tar.gz -zxvf ${{ github.sha }}.tar.gz .
-      - run: zip -r app-artifacts.zip build/
+      - run: tar.gz -zxvf app-artifacts.tar.gz .
+      #      - run: zip -r app-artifacts.zip build/
 
       - uses: ncipollo/release-action@v1
         with:
