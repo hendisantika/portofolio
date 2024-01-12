@@ -61,11 +61,11 @@ jobs:
       #      - run: tar.gz -zxvf ${{ github.sha }}.tar.gz .
       #      - run: tar.gz -zxvf app-artifacts.tar.gz .
       #      - run: zip -r app-artifacts.zip .output
+      - name: Pull environment form variable
+        run: echo "$ENV_GITHUB" > .env_github
 
       - name: Upload app-artifacts to remote folder
         uses: appleboy/scp-action@master
-        run: |
-          echo "$ENV_GITHUB" > .env_github
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
