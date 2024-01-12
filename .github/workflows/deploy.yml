@@ -91,10 +91,10 @@ jobs:
         env:
           GITHUB_SHA: ${{ github.sha }}
         with:
-          host: ${{ secrets.HOST }}
-          username: "root"
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: "22"
+          port: ${{ secrets.SSH_PORT }}
           envs: GITHUB_SHA
           script: |
             mkdir -p "/var/www/portofolio/releases/${GITHUB_SHA}"
@@ -113,7 +113,7 @@ jobs:
           RELEASE_PATH: /var/www/portofolio/releases/${{ github.sha }}
           ACTIVE_RELEASE_PATH: /var/www/portofolio/live
         with:
-          host: ${{env.IP_ADDRESS}}
+          host: ${{ env.IP_ADDRESS }}
           username: "root"
           key: ${{ secrets.SSH_KEY }}
           port: "22"
