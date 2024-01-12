@@ -67,11 +67,13 @@ jobs:
           #          path: ${{ github.sha }}.tar.gz
           path: .output
 
-      - run: tar.gz -zxvf ${{ github.sha }}.tar.gz .
+      #      - run: tar.gz -zxvf ${{ github.sha }}.tar.gz .
+      - run: zip -r app-artifacts.zip build/
 
       - uses: ncipollo/release-action@v1
         with:
-          artifacts: ${{ github.sha }}.tar.gz
+          #          artifacts: ${{ github.sha }}.tar.gz
+          artifacts: "app-artifacts.zip"
 
       - name: Upload app-artifacts
         uses: appleboy/scp-action@master
@@ -80,7 +82,8 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: ${{ github.sha }}.tar.gz
+          #          source: ${{ github.sha }}.tar.gz
+          source: app-artifacts.zip
           target: /var/www/portofolio/artifacts
 
       - name: Extract archive and create directories
@@ -117,10 +120,8 @@ jobs:
           envs: RELEASE_PATH,ACTIVE_RELEASE_PATH
           script: |
             ln -s -n -f $RELEASE_PATH $ACTIVE_RELEASE_PATH
-            systemctl restart fullstackjack
+            systemctl restart hendisantika.my.id
             chown -R www-data:www-data ${RELEASE_PATH}
-            chown -R www-data:www-data  /var/www/portofolio/database
-            cd /var/www/portofolio/database && npx prisma migrate deploy
 
   clean-up:
     name: "Clean up old versions"
@@ -140,6 +141,3 @@ jobs:
       - uses: geekyeggo/delete-artifact@v1
         with:
           name: app-artifacts
-      - uses: geekyeggo/delete-artifact@v1
-        with:
-          name: database-artifacts
