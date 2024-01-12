@@ -56,7 +56,7 @@ jobs:
 
       #      - run: tar.gz -zxvf ${{ github.sha }}.tar.gz .
       #      - run: tar.gz -zxvf app-artifacts.tar.gz .
-      - run: zip -r app-artifacts.zip .output
+      #      - run: zip -r app-artifacts.zip .output
 
       - name: Upload app-artifacts
         uses: appleboy/scp-action@master
