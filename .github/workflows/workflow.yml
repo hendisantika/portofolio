@@ -58,6 +58,7 @@ jobs:
           echo "Run NuxtJS 3 Web App"
           echo "HENDI SANTIKA Portofolio"
           echo ":: =========================== ::"
+          npm install pm2
           pm2 restart "PORTOFOLIO WEB APP"
 #      - name: Restart webapp via pm2
 #        uses: appleboy/ssh-action@master
