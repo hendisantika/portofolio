@@ -21,9 +21,9 @@ jobs:
           node-version: ${{env.NODE_VERSION}}
           cache: 'yarn'
       - run: |
-          yarn
-          yarn build
-          yarn test
+          npm install
+          npm build
+          npm test
 
   create-deployment-artifacts:
     needs: test-application
@@ -37,7 +37,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{env.NODE_VERSION}}
-          cache: 'yarn'
+          cache: 'npm'
       - run: |
           touch .env
           echo STRIPE_SECRET_KEY=${{ secrets.STRIPE_SECRET_TEST_KEY }} >> .env
