@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: 21
 
-      - uses: pnpm/action-setup@v4
+      - uses: npm/action-setup@v4
         name: Install npm
         with:
           version: 8
@@ -40,8 +40,8 @@ jobs:
       - name: Run Production
         run: |
           #          cp .env.example .env
-                
       
+
       - name: Deploy to server
         uses: garygrossgarten/github-action-scp@release
         with:
