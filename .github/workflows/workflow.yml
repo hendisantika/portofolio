@@ -120,4 +120,4 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           script: |
             cd /var/www/portofolio
-            sh ./pm2.sh
+            ./pm2.sh
