@@ -72,9 +72,9 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           #          source: ${{ github.sha }}.tar.gz
-          source: "app-artifacts.zip"
-          #          target: "/var/www/portofolio/public/"
-          target: $PATH_DEPLOY
+          #          source: "app-artifacts.zip"
+          source: ".output"
+          target: "/var/www/portofolio/public/"
           strip_components: 1
 
       - name: Extract archive and create directories
