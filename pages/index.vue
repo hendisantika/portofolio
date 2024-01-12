@@ -7,25 +7,25 @@
 const jsonLd = {
   "@context": "https://schema.org/",
   "@type": "WebSite",
-  name: "Web developer portfolio | Front End Developer - Po Yi Zhi",
+  name: "Web developer portfolio | Front End Developer - HENDI SANTIKA",
   author: {
     "@type": "Person",
-    "@id": "#poyizhi"
+    "@id": "#hendisantika"
   },
-  url: "https://www.eazypau.com/",
+  url: "https://s.id/hendisantika",
   description:
-    "Personal Portfolio Website. I'm a Front-End Web Developer based in Kuala Lumpur, Malaysia. Currently focused on developing website using Vue and React. Checkout my projects and github repositories",
+    "Personal Portfolio Website. I'm a Back-End Developer based in Bandung, Indonesia. Currently focused on developing website using Vue and Spring Boot. Checkout my projects and github repositories",
   keywords:
-    "Web Developer, Front End Developer, Frontend Developer, Junior Web Developer, Software Developer, Software Engineer, Po Yi Zhi, Yi Zhi, Po YZ, YZ Po, eazypau, Malaysia",
+    "Back End Developer, Web Developer, Back End Engineer, Frontend Developer, Junior Web Developer, Software Developer, Software Engineer, Hendi, Santika, Hendi Santika, kang Hendi, Bandung, JVM INDONESIA",
   image: "https://www.eazypau.com/profile-pics/profile.webp"
 };
 const personJson = {
   "@context": "https://schema.org/",
   "@type": "Person",
   "@id": "#poyizhi",
-  name: "Po Yi Zhi",
-  email: "poyizhi@gmail.com",
-  url: "https://www.eazypau.com/"
+  name: "HENDI SANTIKA",
+  email: "hendisantika@yahoo.co.id",
+  url: "https://s.id/hendisantika"
 };
 useHead({
   script: [

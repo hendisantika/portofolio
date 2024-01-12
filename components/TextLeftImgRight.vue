@@ -161,7 +161,7 @@
                 alt="profile image"
                 height="350"
                 loading="lazy"
-                src="/profile-pics/profile.webp"
+                src="/profile-pics/hendi.jpeg"
                 width="350"
               />
             </div>
