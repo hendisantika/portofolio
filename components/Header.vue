@@ -24,17 +24,17 @@
         </MyTransition>
         <MyTransition :delay="Number(1.1)">
           <span v-if="!loading" class="mt-1 tracking-wide text-white">
-            My name is Po
+            My name is Hendi Santika
           </span>
         </MyTransition>
         <MyTransition :delay="Number(1.3)">
           <span v-if="!loading" class="mt-2 tracking-wide text-white">
-            A Frontend
+            A Software
           </span>
         </MyTransition>
         <MyTransition :delay="Number(1.5)">
           <span v-if="!loading" class="py-2 tracking-wide text-white">
-            Web Developer
+            Developer
           </span>
         </MyTransition>
       </h1>

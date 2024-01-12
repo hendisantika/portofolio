@@ -45,7 +45,7 @@
             >
               <PaperClipIcon /> My Resume
             </a> -->
-            <a href="mailto:poyizhi@gmail.com">
+            <a href="mailto:hendisantika@yahoo.co.id">
               <EnvelopeIcon />
               Say Hello! </a>
           </div>
