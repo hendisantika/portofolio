@@ -121,5 +121,5 @@ jobs:
           #          script: sh /var/www/portofolio/pm2.sh
           #          script: "/home/deployer/.local/share/pnpm/pm2 restart \"PORTOFOLIO WEB APP\""
           script: |
-            export PATH=$PATH:/home/deployer/.local/share/pnpm/pm2
-            pm2 pm2 restart "PORTOFOLIO WEB APP"
+            export PATH=$PATH:/home/deployer/.nvm/versions/node/v20.10.0/bin/pm2
+            /home/deployer/.nvm/versions/node/v20.10.0/bin/pm2 restart "PORTOFOLIO WEB APP"
