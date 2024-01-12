@@ -63,6 +63,12 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: app-artifacts
+          path: ${{ github.sha }}.tar.gz
+      - run: tar.gz -zxvf ${{ github.sha }}.tar.gz .
+
+      - uses: ncipollo/release-action@v1
+        with:
+          artifacts: ${{ github.sha }}.tar.gz
 
       - name: Upload app-artifacts
         uses: appleboy/scp-action@master
