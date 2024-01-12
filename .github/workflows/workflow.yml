@@ -74,7 +74,7 @@ jobs:
           #          source: ${{ github.sha }}.tar.gz
           source: "app-artifacts.zip"
           #          target: "/var/www/portofolio/public/"
-          target: ${{ $PATH_DEPLOY }}
+          target: $PATH_DEPLOY
           strip_components: 1
 
       - name: Extract archive and create directories
