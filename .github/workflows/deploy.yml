@@ -72,9 +72,6 @@ jobs:
         with:
           name: app-artifacts
 
-      - uses: actions/download-artifact@v3
-        with:
-          name: database-artifacts
       - name: Upload app-artifacts
         uses: appleboy/scp-action@master
         with:
