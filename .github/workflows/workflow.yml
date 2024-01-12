@@ -67,7 +67,8 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           #          source: ${{ github.sha }}.tar.gz
           source: "app-artifacts.zip"
-          target: /var/www/portofolio/public/
+          target: "/var/www/portofolio/public/"
+          strip_components: 1
 
       - name: Extract archive and create directories
         uses: appleboy/ssh-action@master
