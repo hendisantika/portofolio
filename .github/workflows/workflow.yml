@@ -15,21 +15,21 @@ jobs:
         with:
           node-version: 21
 
-      - uses: npm/action-setup@v4
-        name: Install npm
-        with:
-          version: 8
-          run_install: false
-      - name: Get npm store directory
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(npm store path --silent)" >> $GITHUB_ENV
+      #      - uses: npm/action-setup@v4
+      #        name: Install npm
+      #        with:
+      #          version: 8
+      #          run_install: false
+      #      - name: Get npm store directory
+      #        shell: bash
+      #        run: |
+      #          echo "STORE_PATH=$(npm store path --silent)" >> $GITHUB_ENV
 
       - uses: actions/cache@v3
         name: Setup npm cache
         with:
           path: ${{ env.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/npm-lock.yaml') }}
+          key: ${{ runner.os }}-npm-store-${{ hashFiles('**/npm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-npm-store-
 
