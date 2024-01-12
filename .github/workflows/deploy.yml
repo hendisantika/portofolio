@@ -50,8 +50,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: app-artifacts
-          path: ${{ github.sha }}.tar.gz
-  #          path: .output
+          #          path: ${{ github.sha }}.tar.gz
+          path: .output
 
   prepare-release-on-servers:
     needs: create-deployment-artifacts
