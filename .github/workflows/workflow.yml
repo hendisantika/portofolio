@@ -120,5 +120,5 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           #          script: sh /var/www/portofolio/pm2.sh
           script: |
-            npm install -g pm2
-            pm2 restart "PORTOFOLIO WEB APP"
+            #            npm install -g pm2
+                    /home/deployer/.local/share/pnpm/pm2 restart "PORTOFOLIO WEB APP"
