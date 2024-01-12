@@ -77,17 +77,17 @@ jobs:
           target: "/var/www/portofolio/public/"
           strip_components: 1
 
-      - name: Extract archive and create directories
-        uses: appleboy/ssh-action@master
-        env:
-          GITHUB_SHA: ${{ github.sha }}
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USERNAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: ${{ secrets.SSH_PORT }}
-          envs: GITHUB_SHA
-          script: unzip -r app-artifacts.zip .
+      #      - name: Extract archive and create directories
+      #        uses: appleboy/ssh-action@master
+      #        env:
+      #          GITHUB_SHA: ${{ github.sha }}
+      #        with:
+      #          host: ${{ secrets.SSH_HOST }}
+      #          username: ${{ secrets.SSH_USERNAME }}
+      #          key: ${{ secrets.SSH_PRIVATE_KEY }}
+      #          port: ${{ secrets.SSH_PORT }}
+      #          envs: GITHUB_SHA
+      #          script: unzip -r app-artifacts.zip .
 
 
       #      - name: Deploy to server
