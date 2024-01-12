@@ -39,8 +39,7 @@ jobs:
 
       - name: Run Production
         run: |
-          #          cp .env.example .env
-               npm run prod
+          npm run build
 
       - name: Deploy to server
         uses: garygrossgarten/github-action-scp@release
